@@ -1,15 +1,15 @@
 <html manifest="psfree_lapse.cache">
 <head>
-<title>Mohamed Gaber PS4(9.00)</title>
+<title>Mohamed Gaber PS4(9.00-9.60)</title>
 <style>
 body{background:url(ps4.jpg); background-size: 100% 100%; linear-gradient(to bottom right, #063FAB, #01258A);color:rgb(0, 0, 0);font-size:28px;text-align:center;margin:0;overflow:hidden;}
 .info{position:relative;top:39%;}
 </style>
 <script>
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));msgs.innerHTML="تثبيت ذاكرة التخزين المؤقت غير المتصلة ... " + Percent + "%"};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));msgs.innerHTML="Installing Offline Cache ... " + Percent + "%"};
 function DisplayCacheProgress(){
-setTimeout(function(){msgs.innerHTML=" تم تثبيت ذاكرة التخزين المؤقت بنجاح اقفل الانترنت و اعد فتح المتصفح";},2000);
+setTimeout(function(){msgs.innerHTML="Cache Installed Successfully";},2000);
 setTimeout(function(){location.reload();},3000);
 }
 window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};

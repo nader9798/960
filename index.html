@@ -21,7 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mohamed Gaber PS4(9.00)</title>
+  <title>Mohamed Gaber PS4(9.00-9.60)</title>
   <style>
     * {
       box-sizing: border-box;
@@ -34,7 +34,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       background-image: url(ps4.jpg); background-size: 100% 100%;
       background-size: cover;
       background-position: center;
-      color: rgb(255, 255, 255);
+      color: white;
       font-family: Arial, sans-serif;
       height: 100vh;
       display: flex;
@@ -78,18 +78,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </style>
 </head>
 <body>
-  <script>
-    if (window.applicationCache.status === 0) {
-      window.location.replace("cache.html");
-    }
-  </script>
+ 
 
   <div class="card">
     <h1>.....جاري تفعيل</h1>
     <pre id="console"></pre>
   </div>
-
-  <script src="payload.js"></script>
-  <script type="module" src="./alert.mjs"></script>
+           <script src='./js/index.js'></script>
+           <script type="module" src="./alert.mjs"></script>
 </body>
 </html>
