@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MOHAMED GABER 7.00 - 9.60</title>
+    <script src="./bundle.js"></script>
+    <style>
+      body {
+        background:url('icon0.png');background-size: 100% 100%;
+        background-color: #252526;
+        color: #000000;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      #console {
+        font-family: monospace;
+        background-color: #1e1e1e;
+        color: #000000;
+        border: 1px solid #000000;
+        padding: 12px;
+        border-radius: 6px;
+        margin-top: 50px;
+        text-align: left;
+      }
+      #jailbreakBtn {
+        margin-top: 50px;
+        padding: 12px 24px;
+        font-size: 50px;
+        font-weight: bold;
+        background: #007acc;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #jailbreakBtn:disabled {
+        background: #000000;
+        color: #33ff00;
+        cursor: not-allowed;
+      }
+      #jailbreakBtn:not(:disabled):hover {
+        background: #005a9e;
+      }
+      footer {
+        margin-top: 50px;
+        font-size: 30px;
+        color: #000000;
+      }
+    </style>
+    <script>
+      if ((window.applicationCache.status == '0') || (window.applicationCache.status == '3')) { // 0: UNCACHED, 3: IDLE
+        window.location.replace("cache.html");
+      }
+    </script>
+  </head>
+  <body>
+    <h2> MOHAMED GABER 7.00 - 9.60 </h2>
+    <div>
+      <button id="jailbreakBtn">اضغط لتهكير</button>
+    </div>
+    <pre id="console"></pre>
+    <footer>
+       <h1>  By:Mohamed Gaber
+        <h2>   01142979822</strong>
+    </footer>
+  </body>
+  <script>
+    // Logging utility
+    const outputConsole = document.getElementById("console");
+    window.log = (msg, color="#cccccc") => { outputConsole.innerHTML += `<span style="color:${color}">${msg}</span><br>`; };
+    // Event definitions
+    addEventListener('رفض غير معالج', event => {
+      const reason = event.reason;
+      alert(
+        'رفض غير معالج\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+    });
+    addEventListener('خطأ', event => {
+      const reason = event.error;
+      alert(
+        'خطأ غير معالج\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+      return true; // يُستخدم لإخفاء رسالة الخطأ على وحدة التحكم
+    });
+    // اضغط على الزر
+    document.getElementById("jailbreakBtn").addEventListener("click", () => {
+      // قم بتعطيل هذه الخاصية لمنع النقر المزدوج
+      document.getElementById("jailbreakBtn").disabled = true;
+      outputConsole.textContent = ""; // Clear console log
+      try {
+        doJBwithPSFreeLapseExploit();
+      } catch (error) {
+        window.log("حدث خطأ أثناء عملية الاستغلال: " + error, "red");
+      }
+    });
+  </script>
+</html>
